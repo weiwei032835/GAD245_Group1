@@ -1,0 +1,34 @@
+﻿/*插圖*/
+p.vs {
+    width: 100px;
+    height: 100px;
+}
+/*圖 等比*/
+p.pic{ width:100%; position:relative; }
+p.pic::after{ content:""; display:block; width:100%; padding-bottom:56%; }
+p.pic img { display:block; width:100%; height:100%; object-fit:cover; position:absolute; }
+
+/* 1200px 以下 */
+@media only screen and (max-width: 1200px) {
+    /*參數*/
+    .col-md-7 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    /*結果*/
+    .col-md-5{
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    /*改變欄寬*/
+    .col-md-2 {
+        width: 25%;
+    }
+}
+/* 768px 以下 */
+@media only screen and (max-width: 768px) {
+    /*改變欄寬*/
+    .col-md-2 {
+        width: 100%;
+    }
+}

@@ -1,0 +1,212 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>心臟病檢測</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicons -->
+    <link rel="icon" href="./images/chat-heart-fill.svg" sizes="16x16" type="image/png">
+
+</head>
+
+<body>
+
+    <main>
+        <section class="py-5 text-center container">
+            <div class="row">
+                <div class="col-lg-6 col-md-8 mx-auto d-flex align-items-center justify-content-center">
+                    <h1 class="fw-bold">心臟病檢測</h1>
+                    <p class="vs"><img src="./images/00.png" alt="心臟病檢測" class="img-fluid"></p>
+                </div>
+            </div>
+        </section>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-7 col-lg-8">
+                        <h4>輸入參數</h4>
+
+                        <form class="needs-validation" novalidate>
+
+                            <div class="row g-3">
+
+                                <div class="col-md-3">
+                                    <label for="age" class="form-label">年齡 age</label>
+                                    <input type="oldpeak" class="form-control" id="age" placeholder="輸入年齡">
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="sex" class="form-label">性別 sex</label>
+                                    <select class="form-select" id="sex" required>
+                                        <option value="0">女</option>
+                                        <option value="1">男</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="country" class="form-label">胸痛類型 cp</label>
+                                    <select class="form-select" id="country" required>
+                                        <option value="0">0 代表OOO</option>
+                                        <option value="1">1 代表OOO</option>
+                                        <option value="2">2 代表OOO</option>
+                                        <option value="3">3 代表OOO</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="col-md-2">
+                                    <label for="trestbps" class="form-label">血壓 trestbps</label>
+                                    <input type="oldpeak" class="form-control" id="trestbps" placeholder="輸入數值">
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="chol" class="form-label">膽固醇 chol</label>
+                                    <input type="oldpeak" class="form-control" id="chol" placeholder="輸入數值">
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="fbs" class="form-label">血糖 fbs</label>
+                                    <select class="form-select" id="fbs" required>
+                                        <option value="0">空腹血糖 <= 120 mg/dl</option>
+                                        <option value="1">空腹血糖 > 120 mg/dl</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="col-md-3">
+                                    <label for="restecg" class="form-label">靜息心電圖 restecg</label>
+                                    <select class="form-select" id="restecg" required>
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <label for="country" class="form-label">最大心率 fbs</label>
+                                    <input type="oldpeak" class="form-control" id="oldpeak" placeholder="輸入數值">
+                                </div>
+
+
+                                <div class="col-md-3">
+                                    <label for="country" class="form-label">運動誘發心絞痛 exang </label>
+                                    <select class="form-select" id="country" required>
+                                        <option value="">否</option>
+                                        <option value="">是</option>
+
+                                    </select>
+                                </div>
+
+
+                                <div class="col-md-3">
+                                    <label for="oldpeak" class="form-label">ST 段壓低 oldpeak</label>
+                                    <input type="oldpeak" class="form-control" id="oldpeak" placeholder="0-2 數值">
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="slope" class="form-label">ST 段的斜率 slope</label>
+                                    <select class="form-select" id="ca" required>
+                                        <option value="0">正常</option>
+                                        <option value="1">固定缺陷</option>
+                                        <option value="2">可逆缺陷</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <label for="ca" class="form-label">血管 ca</label>
+                                    <select class="form-select" id="ca" required>
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="col-md-3">
+                                    <label for="thal" class="form-label">鉈掃描結果 thal</label>
+                                    <select class="form-select" id="thal" required>
+                                        <option value="0">正常</option>
+                                        <option value="1">固定缺陷</option>
+                                        <option value="2">可逆缺陷</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="target" class="form-label">心臟病患者 target</label>
+                                    <select class="form-select" id="target" required>
+                                        <option value="0">否</option>
+                                        <option value="1">是</option>
+
+                                    </select>
+                                </div>
+
+                            </div>
+                            <p><button type="submit" class="btn btn-primary my-4">送出</button></p>
+                        </form>
+                    </div>
+                    <div class="col-md-5 col-lg-4 order-md-last">
+                        <h4 class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-primary">診斷結果</span>
+                        </h4>
+                        <ul class="list-group mb-3">
+                            <li class="list-group-item  ">
+                                <div>
+                                    <h6 class="my-0">產生預測圖1</h6>
+                                    <small class="text-muted">隨機森林 (Random Forest)</small>
+                                    <p class="pic"><img src="./images/test-1.png" alt=""></p>
+                                </div>
+                                
+                            </li>
+                            <li class="list-group-item ">
+                                <div>
+                                    <h6 class="my-0">產生預測圖2</h6>
+                                    <small class="text-muted">梯度提升樹 (XGBoost)</small>
+                                    <p class="pic"><img src="./images/test-2.png" alt=""></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div>
+                                    <h6 class="my-0">產生預測圖3</h6>
+                                    <small class="text-muted">邏輯回歸</small>
+                                    <p class="pic"><img src="./images/test-3.png" alt=""></p>
+                                </div>
+                              
+                            </li>
+                        
+                            <li class="list-group-item d-flex justify-content-between">
+                                <strong>無心臟病</strong>
+                            </li>
+                        </ul>
+                        <style>
+                           
+                        </style>
+
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <footer class="text-muted py-4">
+        <div class="container">
+            <p class="mb-1">AI數據應用人才養成班_Group 1</p>
+            <p class="mb-0">01 陳邦彥 Byc 03 游雅婷 Emily 07 劉晏瑜 Francis 20 王偉宇 Orot 44 王佳韻 Dorothy 51 陳葳 Wei </p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
