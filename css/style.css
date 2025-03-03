@@ -3,6 +3,9 @@ p.vs {
     width: 100px;
     height: 100px;
 }
+main {
+    background-color: #e9ecef;
+}
 /*圖 等比*/
 p.pic{ width:100%; position:relative; }
 p.pic::after{ content:""; display:block; width:100%; padding-bottom:56%; }

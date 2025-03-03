@@ -19,7 +19,6 @@
 </head>
 
 <body>
-
     <main>
         <section class="py-5 text-center container">
             <div class="row">
@@ -35,14 +34,15 @@
                 <div class="row g-4">
                     <div class="col-md-7 col-lg-8">
                         <h4>輸入參數</h4>
-
+                        <!-- 表單 開始 -->
                         <form class="needs-validation" novalidate>
 
                             <div class="row g-3">
-
                                 <div class="col-md-3">
                                     <label for="age" class="form-label">年齡 age</label>
-                                    <input type="oldpeak" class="form-control" id="age" placeholder="輸入年齡">
+                                    <select class="form-select" id="age" required>
+                                        <option value="" disabled selected>選擇年齡</option>
+                                    </select>
                                 </div>
 
                                 <div class="col-md-3">
@@ -66,12 +66,16 @@
 
                                 <div class="col-md-2">
                                     <label for="trestbps" class="form-label">血壓 trestbps</label>
-                                    <input type="oldpeak" class="form-control" id="trestbps" placeholder="輸入數值">
+                                    <select class="form-select" id="trestbps" required>
+                                        <option value="" disabled selected>選擇血壓</option>
+                                    </select>
                                 </div>
 
                                 <div class="col-md-3">
                                     <label for="chol" class="form-label">膽固醇 chol</label>
-                                    <input type="oldpeak" class="form-control" id="chol" placeholder="輸入數值">
+                                    <select class="form-select" id="cholSelect" required>
+                                        <option value="" disabled selected>選擇膽固醇</option>
+                                    </select>
                                 </div>
 
                                 <div class="col-md-3">
@@ -81,7 +85,6 @@
                                         <option value="1">空腹血糖 > 120 mg/dl</option>
                                     </select>
                                 </div>
-
 
                                 <div class="col-md-3">
                                     <label for="restecg" class="form-label">靜息心電圖 restecg</label>
@@ -93,24 +96,27 @@
                                 </div>
 
                                 <div class="col-md-2">
-                                    <label for="country" class="form-label">最大心率 fbs</label>
-                                    <input type="oldpeak" class="form-control" id="oldpeak" placeholder="輸入數值">
-                                </div>
-
-
-                                <div class="col-md-3">
-                                    <label for="country" class="form-label">運動誘發心絞痛 exang </label>
-                                    <select class="form-select" id="country" required>
-                                        <option value="">否</option>
-                                        <option value="">是</option>
-
+                                    <label for="thalach" class="form-label">最大心率 thalach</label>
+                                    <select class="form-select" id="thalachSelect" required>
+                                        <option value="" disabled selected>選擇最大心率</option>
                                     </select>
                                 </div>
 
 
                                 <div class="col-md-3">
-                                    <label for="oldpeak" class="form-label">ST 段壓低 oldpeak</label>
-                                    <input type="oldpeak" class="form-control" id="oldpeak" placeholder="0-2 數值">
+                                    <label for="exang" class="form-label">運動誘發心絞痛 exang </label>
+                                    <select class="form-select" id="exang" required>
+                                        <option value="0">否</option>
+                                        <option value="1">是</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="col-md-3">
+                                    <label for="slope" class="form-label">ST 段壓低 oldpeak</label>
+                                    <select class="form-select" id="oldpeakSelect" required>
+                                        <option value="" disabled selected>選擇 ST 段壓低</option>
+                                    </select>
                                 </div>
 
                                 <div class="col-md-3">
@@ -119,7 +125,6 @@
                                         <option value="0">正常</option>
                                         <option value="1">固定缺陷</option>
                                         <option value="2">可逆缺陷</option>
-
                                     </select>
                                 </div>
 
@@ -144,31 +149,30 @@
                                     </select>
                                 </div>
 
-                                <div class="col-md-3">
-                                    <label for="target" class="form-label">心臟病患者 target</label>
-                                    <select class="form-select" id="target" required>
-                                        <option value="0">否</option>
-                                        <option value="1">是</option>
-
-                                    </select>
-                                </div>
-
                             </div>
-                            <p><button type="submit" class="btn btn-primary my-4">送出</button></p>
+                            <p>
+                                <button type="submit" class="btn btn-primary my-4 me-3">送出</button>
+                                <button type="button" class="btn btn-secondary my-4" id="resetButton">重置</button>
+                            </p>
                         </form>
+                        <!-- 表單 結束 -->
                     </div>
+                    <!-- 結果 開始 -->
                     <div class="col-md-5 col-lg-4 order-md-last">
                         <h4 class="d-flex justify-content-between align-items-center mb-3">
                             <span class="text-primary">診斷結果</span>
                         </h4>
                         <ul class="list-group mb-3">
+                            <li class="list-group-item d-flex justify-content-between">
+                                <strong>無心臟病</strong>
+                            </li>
                             <li class="list-group-item  ">
                                 <div>
                                     <h6 class="my-0">產生預測圖1</h6>
                                     <small class="text-muted">隨機森林 (Random Forest)</small>
                                     <p class="pic"><img src="./images/test-1.png" alt=""></p>
                                 </div>
-                                
+
                             </li>
                             <li class="list-group-item ">
                                 <div>
@@ -183,18 +187,10 @@
                                     <small class="text-muted">邏輯回歸</small>
                                     <p class="pic"><img src="./images/test-3.png" alt=""></p>
                                 </div>
-                              
-                            </li>
-                        
-                            <li class="list-group-item d-flex justify-content-between">
-                                <strong>無心臟病</strong>
                             </li>
                         </ul>
-                        <style>
-                           
-                        </style>
-
                     </div>
+                    <!-- 結果 結束 -->
                 </div>
             </div>
     </main>
@@ -206,7 +202,117 @@
         </div>
     </footer>
 
+    <script>
+        // 最大心率 thalach 下拉選單 
+        const thalachSelect = document.getElementById("thalachSelect");
+        for (let i = 80; i <= 250; i++) {
+            let option = document.createElement("option");
+            option.value = i;
+            option.textContent = i;
+            thalachSelect.appendChild(option);
+        }
 
+        // 膽固醇 chol 下拉選單 
+        const cholSelect = document.getElementById("cholSelect");
+        for (let i = 100; i <= 450; i++) {
+            let option = document.createElement("option");
+            option.value = i;
+            option.textContent = i;
+            cholSelect.appendChild(option);
+        }
+
+        // 年齡下拉選單 
+        const ageSelect = document.getElementById("age");
+        for (let i = 25; i <= 90; i++) {
+            let option = document.createElement("option");
+            option.value = i;
+            option.textContent = i;
+            ageSelect.appendChild(option);
+        }
+
+        // 血壓下拉選單 
+        const trestbpsSelect = document.getElementById("trestbps");
+        for (let i = 90; i <= 200; i++) {
+            let option = document.createElement("option");
+            option.value = i;
+            option.textContent = i;
+            trestbpsSelect.appendChild(option);
+        }
+
+
+        // ST 段壓低 oldpeak 下拉選單 
+        const oldpeakSelect = document.getElementById("oldpeakSelect");
+
+        for (let i = 0; i <= 45; i++) {
+            let value = (i / 10).toFixed(1).replace(/\.0$/, ''); // 去掉多余的 .0
+            let option = document.createElement("option");
+            option.value = value;
+            option.textContent = value;
+            oldpeakSelect.appendChild(option);
+        }
+
+    </script>
+    <script>
+        //防呆 + 送後端
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector(".needs-validation");
+            const submitButton = form.querySelector("button[type='submit']");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // 阻止表單提交
+
+                let allFilled = true; // 是否所有欄位都選擇了
+                const formData = {};
+
+                // 選擇所有 <select> 元素並驗證
+                const selects = form.querySelectorAll("select");
+                selects.forEach(select => {
+                    if (!select.value) {
+                        allFilled = false; // 若有未填寫欄位
+                        select.classList.add("is-invalid"); // 加入紅色警告框
+                    } else {
+                        select.classList.remove("is-invalid"); // 移除警告
+                        formData[select.id] = select.value; // 存入表單數據
+                    }
+                });
+
+                if (!allFilled) {
+                    alert("請選擇所有選項後再提交！"); // 顯示警告
+                    return; // 阻止後續動作
+                }
+
+                // ✅ 表單通過檢查，可以提交
+                console.log("✅ 表單資料：", formData);
+
+                // 使用 fetch 發送資料到後端
+                fetch("/your-backend-endpoint", {
+                    method: "POST", // 使用 POST 請求
+                    headers: {
+                        "Content-Type": "application/json", // 設定資料格式為 JSON
+                    },
+                    body: JSON.stringify(formData) // 將表單資料轉換為 JSON 字串
+                })
+                    .then(response => response.json()) // 處理後端回應
+                    .then(data => {
+                        // 假設後端回應資料後，顯示成功訊息
+                        console.log("成功回應：", data);
+                        alert("資料已送出！");
+                        form.reset(); // 可以選擇在成功後重置表單
+                    })
+                    .catch(error => {
+                        // 捕獲錯誤並顯示錯誤訊息
+                        console.error("發送資料時發生錯誤：", error);
+                        alert("發生錯誤，請稍後再試！");
+                    });
+            });
+        });
+        // 重置按鈕事件處理
+        resetButton.addEventListener("click", function () {
+            form.reset(); // 重置表單
+        });
+
+    </script>
+    
 </body>
 
 </html>
